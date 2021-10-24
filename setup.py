@@ -6,18 +6,22 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='soumojit',  
-     version='0.0.1',
-     scripts=['soumojit'] ,
+     version='0.0.10',
      author="Soumojit Ash",
-     author_email="Soumojit Ash",
+     author_email="soumojitash@gmail.com",
      description="A pip - Card!",
      long_description=long_description,
-   long_description_content_type="text/markdown",
+     long_description_content_type="text/markdown",
      url="https://github.com/Soumojit28/pip-card",
+     include_package_data=True,
      packages=setuptools.find_packages(),
+     install_requires=['rich'],
      classifiers=[
          "Programming Language :: Python :: 3",
          "License :: OSI Approved :: MIT License",
          "Operating System :: OS Independent",
      ],
+     entry_points = {
+        'console_scripts': ['soumojit=soumojit.command:main'],
+    }
  )
