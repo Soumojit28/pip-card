@@ -1,1 +1,5 @@
 /pip-card
+/dist
+/build
+/soumojit.egg-info
+/soumojit/__pycache__
